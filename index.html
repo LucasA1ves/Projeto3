@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cruzeiro Esporte Clube</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome para ícones -->
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1>Cruzeiro Esporte Clube</h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#carousel">Home</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#partidas">Próximas Partidas</a></li>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#contato">Fale Conosco</a></li>
+          </ul>
+        </nav>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- Carousel -->
+    <section id="carousel">
+      <div class="carousel-container">
+        <div class="carousel-slide">
+          <!-- Clonando a última imagem para o início -->
+          <img src="Imagens/time3.png" alt="Time 3" id="lastClone" />
+
+          <!-- Imagens originais -->
+          <img src="Imagens/time1.png" alt="Time 1" />
+          <img src="Imagens/time2.png" alt="Time 2" />
+          <img src="Imagens/time3.png" alt="Time 3" />
+
+          <!-- Clonando a primeira imagem para o final -->
+          <img src="Imagens/time1.png" alt="Time 1" id="firstClone" />
+        </div>
+        <div class="carousel-controls">
+          <span class="prev">&#10094;</span>
+          <span class="next">&#10095;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre o Cabuloso -->
+    <section id="sobre">
+      <div class="sobre-container">
+        <img
+          src="Imagens/sobre.png"
+          alt="Sobre o Cabuloso"
+          class="sobre-imagem"
+        />
+        <div class="sobre-texto">
+          <h2>Sobre o Cabuloso</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            vero illo illum quos, officiis ab rem suscipit minus saepe.
+            Doloremque eveniet ipsam porro sed quasi quod autem ea nihil
+            officia.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Próximas Partidas -->
+    <section id="partidas" class="partidas">
+      <div class="container">
+        <h2>Próximas Partidas</h2>
+        <div class="partidas-lista">
+          <div class="partida">
+            <h3>Cruzeiro vs Atlético</h3>
+            <p>25/09/2024 - Estádio Mineirão</p>
+          </div>
+          <div class="partida">
+            <h3>Cruzeiro vs Flamengo</h3>
+            <p>01/10/2024 - Estádio do Maracanã</p>
+          </div>
+          <div class="partida">
+            <h3>Cruzeiro vs Palmeiras</h3>
+            <p>08/10/2024 - Allianz Parque</p>
+          </div>
+          <div class="partida">
+            <h3>Cruzeiro vs Santos</h3>
+            <p>15/10/2024 - Vila Belmiro</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Produtos -->
+    <section id="produtos" class="produtos">
+      <div class="container">
+        <h2>Produtos</h2>
+        <div class="tabs">
+          <button class="tab-link active" data-tab="socio">
+            Sócio Torcedor
+          </button>
+          <button class="tab-link" data-tab="uniformes">
+            Uniformes da Temporada
+          </button>
+          <button class="tab-link" data-tab="diversos">Diversos</button>
+        </div>
+
+        <div class="tab-content">
+          <!-- Sócio Torcedor -->
+          <div id="socio" class="tab-pane active">
+            <div class="produtos-grid">
+              <div class="produto">
+                <img src="Imagens/socio1.png" alt="Sócio 1" />
+                <h3>Sócio Bronze</h3>
+                <p>Benefícios básicos e acesso às notícias exclusivas.</p>
+              </div>
+              <div class="produto">
+                <img src="Imagens/socio2.png" alt="Sócio 2" />
+                <h3>Sócio Prata</h3>
+                <p>Inclui benefícios do Prata mais descontos em produtos.</p>
+              </div>
+              <div class="produto">
+                <img src="Imagens/socio3.png" alt="Sócio 3" />
+                <h3>Sócio Ouro</h3>
+                <p>Benefícios do Ouro mais acesso prioritário a ingressos.</p>
+              </div>
+              <div class="produto">
+                <img src="Imagens/socio4.png" alt="Sócio 4" />
+                <h3>Sócio Diamante</h3>
+                <p>
+                  Pacote completo com todos os benefícios anteriores e brindes
+                  exclusivos.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Uniformes da Temporada -->
+          <div id="uniformes" class="tab-pane">
+            <div class="produtos-grid">
+              <div class="produto">
+                <img src="Imagens/uniforme1.png" alt="Uniforme 1" />
+                <h3>Camisa Titular 2024</h3>
+                <p>Design moderno com tecnologia de tecidos avançados.</p>
+              </div>
+              <div class="produto">
+                <img src="Imagens/uniforme2.png" alt="Uniforme 2" />
+                <h3>Camisa Reserva 2024</h3>
+                <p>Conforto e estilo para os dias de reserva.</p>
+              </div>
+              <div class="produto">
+                <img src="Imagens/uniforme3.png" alt="Uniforme 3" />
+                <h3>Camisa de Treino</h3>
+                <p>Camisa de treino 2024.</p>
+              </div>
+            </div>
+          </div>
+          <!-- Diversos -->
+          <div id="diversos" class="tab-pane">
+            <div class="produtos-grid">
+              <div class="produto">
+                <img src="Imagens/diversos1.png" alt="Diverso 1" />
+                <h3>Bola Oficial</h3>
+                <p>Bola de futebol oficial para treinos e jogos.</p>
+              </div>
+              <div class="produto">
+                <img src="Imagens/diversos2.png" alt="Diverso 2" />
+                <h3>Bandeira do Cruzeiro</h3>
+                <p>Bandeira de 1m x 1m para decorar seu espaço.</p>
+              </div>
+              <div class="produto">
+                <img src="Imagens/diversos3.png" alt="Diverso 3" />
+                <h3>Cachecol Oficial</h3>
+                <p>Cachecol quentinho para torcer nas partidas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fale Conosco -->
+    <section id="contato" class="contato">
+      <div class="container">
+        <h2>Fale Conosco</h2>
+        <div class="contato-container">
+          <div class="formulario">
+            <form action="#" method="post">
+              <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" required />
+              </div>
+              <div class="form-group">
+                <label for="mensagem">Mensagem:</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+          <div class="informacoes">
+            <div class="endereco">
+              <h3>Endereço</h3>
+              <p>Rua Cruzeiro, 100<br />Belo Horizonte, MG</p>
+            </div>
+            <div class="redes-sociais">
+              <h3>Redes Sociais</h3>
+              <a href="#" target="_blank"
+                ><i class="fab fa-facebook-f"></i> Facebook</a
+              >
+              <a href="#" target="_blank"
+                ><i class="fab fa-instagram"></i> Instagram</a
+              >
+              <a href="#" target="_blank"
+                ><i class="fab fa-twitter"></i> Twitter</a
+              >
+              <a href="#" target="_blank"
+                ><i class="fab fa-youtube"></i> YouTube</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 Cruzeiro Esporte Clube. Todos os direitos reservados.</p>
+        <div class="footer-links">
+          <a href="#carousel">Home</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#partidas">Próximas Partidas</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#contato">Fale Conosco</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/script.js"></script>
+  </body>
+</html>

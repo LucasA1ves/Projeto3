@@ -1,0 +1,425 @@
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Variáveis de Cores */
+:root {
+    --primary-color: #0033A0;
+    --secondary-color: #FFFFFF;
+    --accent-color: #FFCC00;
+    --background-color: #F4F4F4;
+    --text-color: #333333;
+    --header-height: 80px;
+}
+
+/* Reset de Estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos Globais */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: var(--header-height);
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+header .logo h1 {
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Menu Toggle para Mobile */
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Carousel */
+#carousel {
+    width: 100%;
+    height: 60vh; /* Ajuste conforme necessário */
+    margin-top: var(--header-height);
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls .prev,
+.carousel-controls .next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--secondary-color);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 10; /* Garantir que os controles fiquem acima das imagens */
+}
+
+.carousel-controls .prev:hover,
+.carousel-controls .next:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Sobre o Cabuloso */
+#sobre {
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+}
+
+.sobre-container {
+    display: flex;
+    align-items: flex-start; /* Alinha a imagem ao topo */
+    max-width: 1200px; /* Limita a largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção */
+}
+
+.sobre-imagem {
+    width: 30%; /* Ajusta a largura da imagem para 30% da seção */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 20px; /* Espaço à direita da imagem */
+    border-radius: 10px; /* Arredonda as bordas da imagem */
+}
+
+.sobre-texto {
+    flex: 1; /* Permite que o texto ocupe o espaço restante */
+}
+
+.sobre-texto h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* Próximas Partidas */
+.partidas {
+    padding: 60px 0;
+    background-color: #E6E6E6;
+}
+
+.partidas h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.partidas-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.partida {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.partida h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.partida p {
+    color: var(--text-color);
+}
+
+/* Produtos */
+.produtos {
+    padding: 60px 0;
+    background-color: var(--secondary-color);
+}
+
+.produtos h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tab-link {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.tab-link:hover,
+.tab-link.active {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.tab-pane {
+  display: none; /* Oculta todos os conteúdos inicialmente */
+}
+
+.tab-pane.active {
+  display: block; /* Exibe o conteúdo ativo */
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.produto {
+    background-color: #F9F9F9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.produto:hover {
+    transform: translateY(-5px);
+}
+
+.produto img {
+    width: 100%;
+    height: max-content;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.produto h3 {
+    margin: 15px 0 10px 0;
+    color: var(--primary-color);
+}
+
+.produto p {
+    color: var(--text-color);
+    font-size: 0.9em;
+}
+
+/* Fale Conosco */
+.contato {
+    padding: 60px 0;
+    background-color: #E6E6E6;
+}
+
+.contato h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.contato-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.formulario {
+    flex: 1;
+    min-width: 300px;
+}
+
+.formulario form {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.informacoes {
+    flex: 1;
+    min-width: 300px;
+}
+
+.informacoes h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.informacoes p,
+.informacoes a {
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.informacoes a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.informacoes a i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.informacoes a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sobre-container {
+        flex-direction: column; /* Muda a direção para coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .sobre-imagem {
+        width: 70%; /* Aumenta a largura da imagem em telas menores */
+        margin-bottom: 20px; /* Espaço abaixo da imagem */
+    }
+
+    header nav ul {
+        flex-direction: column; /* Muda a direção do menu para coluna */
+        align-items: center; /* Centraliza os itens do menu */
+    }
+
+    .partidas-lista {
+        grid-template-columns: 1fr; /* Muda para uma coluna em telas menores */
+    }
+
+    .produtos-grid {
+        grid-template-columns: 1fr; /* Muda para uma coluna em telas menores */
+    }
+
+    .contato-container {
+        flex-direction: column; /* Muda a direção para coluna em telas menores */
+        align-items: center; /* Centraliza os itens */
+    }
+}
